@@ -8,17 +8,12 @@ use Illuminate\View\Component;
 
 class Header extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $title = '';
+    public function __construct($componentsName = '')
     {
-        //
+        $this->title = $componentsName;
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
     public function render(): View|Closure|string
     {
         return view('components.header');

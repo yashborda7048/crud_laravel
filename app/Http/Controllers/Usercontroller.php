@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class Usercontroller extends Controller
 {
-    //
-    function show() {
-        return "Hello form controller.";
+    function userName($user = 'yash')
+    {
+        return view('about', ['name' => $user]);
     }
 }
