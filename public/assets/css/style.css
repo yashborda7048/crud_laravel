@@ -1,23 +1,23 @@
-body{
-    font:16px arial;
+body {
+    font: 16px arial;
     margin: 0;
     padding: 0;
     background: #d1d1d1;
 }
 
-#wrapper{
+#wrapper {
     width: 1000px;
     margin: 50px auto 0;
     background-color: #fff;
 }
 
-#header{
+#header {
     text-align: center;
     background-color: #1abc9c;
     padding: 10px;
 }
 
-#header h1{
+#header h1 {
     color: #fff;
     font-size: 40px;
     font-style: italic;
@@ -26,19 +26,19 @@ body{
     margin: 0;
 }
 
-#menu{
+#menu {
     background-color: #333;
 }
-#menu ul{
+#menu ul {
     font-size: 0;
     padding: 0 10px;
     margin: 0;
     list-style: none;
 }
-#menu ul li{
+#menu ul li {
     display: inline-block;
 }
-#menu ul li a{
+#menu ul li a {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -49,37 +49,37 @@ body{
     transition: all 0.3s ease;
 }
 
-#menu ul li a:hover{
-    background-color: rgba(255,255,255,0.2);
+#menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-#main-content{
-     padding: 25px;
+#main-content {
+    padding: 25px;
     min-height: 400px;
 }
-#main-content h2{
+#main-content h2 {
     margin: 0 0 10px;
     text-transform: capitalize;
 }
 
-#main-content table{
+#main-content table {
     width: 100%;
     background-color: #555;
     margin: 0 0 20px;
 }
 
-#main-content table th{
+#main-content table th {
     color: #fff;
     background-color: #333;
     text-transform: uppercase;
 }
-#main-content table th:last-child{
+#main-content table th:last-child {
     width: 130px;
 }
-#main-content table td{
+#main-content table td {
     background-color: #fff;
 }
-#main-content table td a{
+#main-content table td a {
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -89,12 +89,12 @@ body{
     text-decoration: none;
     border-radius: 3px;
 }
-#main-content table td a:nth-child(2){
+#main-content table td a:nth-child(2) {
     background-color: #e74c3c;
     margin: 0 0 0 5px;
 }
 
-#main-content .post-form{
+#main-content .post-form {
     width: 50%;
     padding: 25px;
     margin: 0 auto;
@@ -102,28 +102,28 @@ body{
     border-radius: 10px;
 }
 
-#main-content .post-form .form-group{
+#main-content .post-form .form-group {
     margin: 0 0 15px;
 }
 
-#main-content .post-form .form-group label{
+#main-content .post-form .form-group label {
     width: 30%;
     display: inline-block;
     font-weight: 600;
 }
 #main-content .post-form .form-group input,
-#main-content .post-form .form-group select{
+#main-content .post-form .form-group select {
     font-size: 16px;
     width: 66%;
     display: inline-block;
     padding: 5px;
     margin: 0;
 }
-#main-content .post-form .form-group select{
+#main-content .post-form .form-group select {
     width: 69%;
 }
 
-#main-content .post-form .submit{
+#main-content .post-form .submit {
     font-size: 17px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -137,21 +137,21 @@ body{
     transition: all 0.3s;
 }
 
-#main-content .post-form .submit:hover{
+#main-content .post-form .submit:hover {
     box-shadow: 0 0 5px #555;
 }
 
-#main-content .pagination{
+#main-content .pagination {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-#main-content .pagination li{
+#main-content .pagination li {
     display: inline-block;
 }
 
-#main-content .pagination li a{
+#main-content .pagination li a {
     height: 30px;
     width: 30px;
     line-height: 30px;
@@ -165,7 +165,7 @@ body{
     transition: all 0.3s;
 }
 
-#main-content .pagination li a:hover{
+#main-content .pagination li a:hover {
     background-color: #333;
 }
 
@@ -174,4 +174,17 @@ body{
 }
 .text-danger {
     color: #e74c3c;
+}
+
+.form-group .error {
+    width: 68%;
+    margin-left: auto;
+    display: block;
+    padding: 5px 0px 10px;
+}
+
+.success-message{
+    color: green;
+    text-align: center;
+    margin-bottom: 30px;
 }

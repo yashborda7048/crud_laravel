@@ -9,23 +9,35 @@ class StudentController extends Controller
 {
     public function index()
     {
-        return view('home');
+        return view('home', [
+            'students' => Student::get()
+        ]);
     }
 
     public function store(Request $request)
     {
+        // validatation 
+        $request->validate([
+            'name' => 'required',
+            'address' => 'required',
+            'class' => 'required',
+            'phone' => 'required',
+            'new_img' => 'required|mimes:jpeg,jpg,png,gif|max:10000',
+        ]);
+
         //upload image
         $imgName = time() . '.' . $request->new_img->extension();
         $request->new_img->move(public_path('assets/img'), $imgName);
 
-        $student = new Student;
-        $student->name =  $request->name;
-        $student->address =  $request->address;
-        $student->class =  $request->class;
-        $student->phone =  $request->phone;
-        $student->img =  $imgName;
-        $student->save();
-        return back();
+        //upload data
+        $students = new Student;
+        $students->name = $request->name;
+        $students->address = $request->address;
+        $students->class = $request->class;
+        $students->phone = $request->phone;
+        $students->img = $imgName;
+        $students->save();
+        return back()->withSuccess('Add Successfully !!!');
     }
 
     public function create()
