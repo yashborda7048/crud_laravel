@@ -23,13 +23,13 @@
                     <a href="{{ Route('add') }}">Add</a>
                 </li>
                 <li>
-                    <a href="{{ Route('update') }}">Update</a>
+                    <a href="{{ Route('edit') }}">Update</a>
                 </li>
                 <li>
                     <a href="{{ Route('delete') }}">Delete</a>
                 </li>
                 <li>
-                    <a href="{{ Route('about',['user'=>'vinay']) }}">About Us</a>
+                    <a href="{{ Route('about')}}">About Us</a>
                 </li>
             </ul>
         </div>

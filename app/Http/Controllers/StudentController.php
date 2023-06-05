@@ -40,15 +40,24 @@ class StudentController extends Controller
         return back()->withSuccess('Add Successfully !!!');
     }
 
+    public function edit($id)
+    {
+        $students = Student::where('id', $id)->first();
+
+        return view('edit', ['student' => $students]);
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        dd($request->all());
+        // return view('update');
+    }
     public function create()
     {
         return view('add');
     }
 
-    public function edit()
-    {
-        return view('update');
-    }
     public function delete()
     {
         return view('delete');
