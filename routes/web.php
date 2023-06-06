@@ -5,14 +5,15 @@ use App\Http\Controllers\Usercontroller;
 use App\Http\Controllers\StudentController;
 
 Route::get('/', [StudentController::class, 'index'])->name('home');
-Route::get('/add', [StudentController::class, 'create'])->name('add');
+Route::view('add', 'add')->name('add');
 Route::get('/edit/{id?}', [StudentController::class, 'edit'])->name('edit');
 Route::put('/update/{id}', [StudentController::class, 'update'])->name('update');
-Route::get('/delete', [StudentController::class, 'delete'])->name('delete');
+// Route::get('/delete/{id}', [StudentController::class, 'destroy'])->name('delete');  for get method 
+Route::delete('delete/{id}', [StudentController::class, 'destroy'])->name('delete'); // for delete method 
 Route::get('/about/{user?}', [Usercontroller::class, 'userName'])->name('about');
 
 Route::post('/store', [StudentController::class, 'store'])->name('store');
-Route::get('alert/{AlertType}','sweetalertController@alert')->name('alert');
+Route::get('alert/{AlertType}', 'sweetalertController@alert')->name('alert');
 Route::fallback(function () {
     return "<h1>Page Not Found.</h1>";
 });

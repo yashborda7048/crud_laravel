@@ -23,10 +23,7 @@
                     <a href="{{ Route('add') }}">Add</a>
                 </li>
                 <li>
-                    <a href="{{ Route('edit') }}">Update</a>
-                </li>
-                <li>
-                    <a href="{{ Route('delete') }}">Delete</a>
+                    <a href="{{ Route('edit', ['id' => '1']) }}">Update</a>
                 </li>
                 <li>
                     <a href="{{ Route('about')}}">About Us</a>

@@ -25,7 +25,12 @@
                 <label>Class <span class="text-danger">*</span></label>
                 <select name="class" value="{{ old('class') }}">
                     <option value="" selected disabled>Select Class</option>
-                    <option value="1">BBA</option>
+                    <option value="1">BCOM</option>
+                    <option value="2">BBA</option>
+                    <option value="3">BCA</option>
+                    <option value="4">MBA</option>
+                    <option value="5">MCOM</option>
+                    <option value="6">MSC</option>
                 </select>
                 @if ($errors->has('class'))
                     <span class="text-danger error">{{ $errors->first('class') }}</span>

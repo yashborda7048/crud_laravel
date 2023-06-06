@@ -2,7 +2,7 @@
 <div>
     <div id="main-content">
         <h2>Update Record #{{ $student->id }}</h2>
-        <form class="post-form" method="post" action="/update" enctype="multipart/form-data">
+        <form class="post-form" method="post" action="/update/{{ $student->id }}" enctype="multipart/form-data">
             @if ($message = Session::get('success'))
                 <h3 class="success-message">{{ $message }}</h3>
             @endif
@@ -26,7 +26,12 @@
                 <label>Class <span class="text-danger">*</span></label>
                 <select name="class" value="{{ old('class', $student->class) }}">
                     <option value="" selected disabled>Select Class</option>
-                    <option value="1">BBA</option>
+                    <option value="1">BCOM</option>
+                    <option value="2">BBA</option>
+                    <option value="3">BCA</option>
+                    <option value="4">MBA</option>
+                    <option value="5">MCOM</option>
+                    <option value="6">MSC</option>
                 </select>
                 @if ($errors->has('class'))
                     <span class="text-danger error">{{ $errors->first('class') }}</span>
