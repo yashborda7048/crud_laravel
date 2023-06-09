@@ -101,6 +101,7 @@ body {
     border: none;
     padding: 3px 7px;
     border-radius: 3px;
+    width: auto;
 }
 
 #main-content .post-form {

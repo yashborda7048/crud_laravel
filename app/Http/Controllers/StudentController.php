@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class StudentController extends Controller
 {
     public function index()
     {
         return view('home', [
-            // 'students' => Student::get()
             'students' => Student::latest()->paginate(4)
         ]);
     }
@@ -38,7 +38,10 @@ class StudentController extends Controller
         $students->phone = $request->phone;
         $students->img = $imgName;
         $students->save();
-        return back()->withSuccess('Add Successfully !!!');
+        return view('home', [
+            'Alert' => toast('Success Toast', 'success')->autoClose(2000),
+            'students' => Student::latest()->paginate(4)
+        ]);
     }
 
     public function edit($id)

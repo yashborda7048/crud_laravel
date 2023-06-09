@@ -3,9 +3,9 @@
     <div id="main-content">
         <h2>Add New Record</h2>
         <form class="post-form" method="post" action="/store" enctype="multipart/form-data">
-            @if ($message = Session::get('success'))
+            {{-- @if ($message = Session::get('success'))
                 <h3 class="success-message">{{ $message }}</h3>
-            @endif  
+            @endif   --}}
             @csrf
             <div class="form-group">
                 <label>Name <span class="text-danger">*</span></label>

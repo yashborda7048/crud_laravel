@@ -32,12 +32,12 @@
                     <td>{{ $student->phone }}</td>
                     <td>
                         <a href='{{ Route('edit', ['id' => $student->id]) }}'>Edit</a>
-                        {{-- <form method="POST" action="delete/{{ $student->id }}">
+                        <form style="display: inline-flex" method="POST" action="delete/{{ $student->id }}">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="deletebtn">Delete</button>
-                        </form> --}}
-                        <button onclick="document.getElementById('id01').style.display='block'">Delete</button>
+                        </form>
+                        {{-- <button onclick="document.getElementById('id01').style.display='block'">Delete</button> --}}
                     </td>
                 </tr>
             @endforeach
