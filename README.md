@@ -1,3 +1,11 @@
+Rename .env.example file to .envinside your project root and fill the database information. (windows wont let you do it, so you have to open your console cd your project root directory and run mv .env.example .env )
+Open the console and cd your project root directory
+Run composer install or php composer.phar install
+Run php artisan key:generate
+Run php artisan migrate
+Run php artisan db:seed to run seeders, if any.
+Run php artisan serve
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

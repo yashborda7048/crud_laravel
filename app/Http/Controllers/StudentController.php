@@ -16,7 +16,7 @@ class StudentController extends Controller
     }
 
     public function store(Request $request)
-    {
+    { 
         // validatation 
         $request->validate([
             'name' => 'required',
@@ -39,7 +39,7 @@ class StudentController extends Controller
         $students->img = $imgName;
         $students->save();
         return view('home', [
-            'Alert' => toast('Success Toast', 'success')->autoClose(2000),
+            'Alert' => toast('Successfully added!!', 'success')->autoClose(2000),
             'students' => Student::latest()->paginate(4)
         ]);
     }

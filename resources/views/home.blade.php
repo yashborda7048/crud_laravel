@@ -45,7 +45,7 @@
     </table>
     {{ $students->links() }}
 
-    <div id="id01" class="modal">
+    {{-- <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
             title="Close Modal">&times;</span>
         <form class="modal-content" action="/action_page.php">
@@ -60,6 +60,6 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> --}}
 </div>
 <x-footer />
